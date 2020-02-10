@@ -1,23 +1,37 @@
-let btn = document.querySelector('button');
+var btn = document.querySelector('button');
 var input = document.getElementById("input"); 
+var check = document.getElementById('check');
 var output = document.getElementById("output");
 var inputVal = input.value;
+var checkVal = check.value;
 
 function reverse(s){
+  check.style.visibility = 'hidden';
   output.value = '';
-  for(let i = s.length -1; i>=0; i--){
+  for(var i = s.length -1; i>=0; i--){
     output.value = output.value +=s[i];
   }
 }
 
 function endWith(s){
-  output.value = '';
-
+  output.value = '';  
+  if((checkVal == s[s.length - 1]) && (checkVal.length == 1)){
+    output.value = 'true';
+  }  
+  else {
+    output.value = 'false';
+  }
 }
 
 function startWith(s){
   output.value = '';
-
+  output.value = '';  
+  if((checkVal == s[0]) && (checkVal.length == 1)){
+    output.value = 'true';
+  }  
+  else {
+    output.value = 'false';
+  }
 }
 
 function isCamelCase(s){
@@ -61,7 +75,18 @@ function isSnakeCase(s){
 
 function isNan(s){
   output.value = '';
-  
+  t = '0123456789';
+  var k = 0;
+  for(var i = 0; i < s.length; i++){
+    if(t.search(s[i]) == -1){
+      k++;
+    }
+  }
+  if(k == s.length){
+    output.value = 'true';
+  }
+  else 
+    output.value = 'false';
 }
 
 function isPhone(s){
@@ -79,5 +104,26 @@ function isPhone(s){
 }
 
 function isEmail(s){
-  output.value = '';
+  output.value = ''; 
+  var k = 0, n = 0;
+  var t = "@mail.com"; 
+  for(var i = 0; i < s.length; i++){
+    while(s[i] != '@'){
+      k++;
+    }
+  }
+
+  for(var i = k; i <  s.length; i++){
+    if(t.length == s.length - k){
+      if(s[i] == t[i]){
+        n++;
+      }
+    }
+  }
+  if(n == t.length){
+    output.value = 'true';
+  }
+  else{
+    output.value = 'false';
+  }
 }
