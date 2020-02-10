@@ -1,0 +1,50 @@
+body {
+  background: rgba(148, 72, 72, 0.753);
+  font-family: 'FF Trixie' ;
+}
+
+.left {
+  float: left;
+  width: 30%;
+}
+
+.right {
+  float: right;
+  width: 45%;
+}
+
+button {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5%;
+  height: 50px;
+  width: 200px;
+}
+
+#input {
+  font-size: 18px;
+  margin-top: 42%;
+  margin-left: 15%;
+  height: 50px;
+  width: 500px;
+}
+
+#output {
+  font-size: 18px;
+  margin-top: 50px;
+  margin-left: 15%;
+  height: 50px;
+  width: 500px;
+}
+
+#trash {
+  vertical-align: bottom;
+  height: 55px;
+}
+
+.clear {
+  width: 70px;
+  height: 58px;
+  vertical-align: bottom;
+  position: static;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css">
+  <title>MIA</title>
+</head>
+<body>
+  <div>
+    <div class="left"> 
+      <input type="text" id="input" onchange="inputVal = this.value;" value="Some string">
+      <p style="font-size: 20px;"><input type="text" id="output" readonly = 'true'></input>
+      </p>
+    </div>
+    <div class="right">
+      <button onclick="reverse(inputVal);">
+        Reverse string
+      </button><br>
+      <button onclick="endWith(inputVal)">
+        End With
+      </button><br>
+      <button onclick="startWith(inputVal)">
+        Start With
+      </button><br>
+      <button onclick="isCamelCase(inputVal)">
+        Is Camel Case
+      </button><br>
+      <button onclick="isSnakeCase(inputVal)">
+        Is Snake Case
+      </button><br>
+      <button onclick="isNan(inputVal)">
+        Is NaN
+      </button><br>
+      <button onclick="isPhone(inputVal)">
+        Is phone
+      </button><br>
+      <button onclick="isEmail(inputVal)">
+        Is email
+      </button><br>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
