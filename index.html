@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,32 +10,33 @@
     <div class="left"> 
       <input type="text" id="input" onchange="inputVal = this.value;" value="Some string"><br>
       <input type="text" id="check" onchange="checkVal = this.value;">
-      <p style="font-size: 20px;"><input type="text" id="output" readonly = 'true'></input>
-      </p>
+      <p style="font-size: 20px;">
+          <input type="text" id="output" readonly onchange="outputVal = this.value">
+        </p>
     </div>
     <div class="right">
-      <button onclick="reverse(inputVal);">
+      <button onclick="reverse(inputVal,outputVal);">
         Reverse string
       </button><br>
-      <button onclick="endWith(inputVal)">
+      <button onclick="endWith(inputVal,outputVal,checkVal)">
         End With
       </button><br>
-      <button onclick="startWith(inputVal)">
+      <button onclick="startWith(inputVal,outputVal,checkVal)">
         Start With
       </button><br>
-      <button onclick="isCamelCase(inputVal)">
+      <button onclick="isCamelCase(inputVal,outputVal)">
         Is Camel Case
       </button><br>
-      <button onclick="isSnakeCase(inputVal)">
+      <button onclick="isSnakeCase(inputVal,outputVal)">
         Is Snake Case
       </button><br>
-      <button onclick="isNan(inputVal)">
+      <button onclick="isNan(inputVal,outputVal)">
         Is NaN
       </button><br>
-      <button onclick="isPhone(inputVal)">
+      <button onclick="isPhone(inputVal,outputVal)">
         Is phone
       </button><br>
-      <button onclick="isEmail(inputVal)">
+      <button onclick="isEmail(inputVal,outputVal,checkVal)">
         Is email
       </button><br>
     </div>
