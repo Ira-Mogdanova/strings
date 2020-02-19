@@ -2,7 +2,6 @@ var btn = document.querySelector('button');
 var input = document.getElementById("input"); 
 var check = document.getElementById("check");
 var output = document.getElementById("output");
-var btn = document.querySelector("button");
 var inputVal = input.value;
 var outputVal = output.value;
 var checkVal = check.value;
@@ -20,28 +19,34 @@ function endWith(s,t,c){
   t = '';
   var n = 0;
   var d = '';
-  for(var i = (s.length - c.length); i < s.length; i++){
-    for(var j = 0; j < c.length; j++){
-      if(s[i] == c[j]) n++;
+  if(c != ''){
+    for(var i = (s.length - c.length); i < s.length; i++){
+      for(var j = 0; j < c.length; j++){
+        if(s[i] == c[j]) n++;
+      }
     }
+    if(n == c.length) {
+      t = true;
+    }
+    else t = false;
   }
-  if(n == c.length) {
-    t = true;
-  }
-  else t = false;
+  else alert("Enter some end to check it!");
   console.log(t);
 }
 
 function startWith(s,t,c){
   t = '';
   var n = 0;
-  for(var i = 0; i < c.length; i++){
-    if(s[i] == c[i]) n++;
+  if(c != ''){
+    for(var i = 0; i < c.length; i++){
+      if(s[i] == c[i]) n++;
+    }
+    if(n == c.length) {
+      t = true;
+    }
+    else t = false;
   }
-  if(n == c.length) {
-    t = true;
-  }
-  else t = false;
+  else alert("Enter some start to check it!");
   console.log(t);
 }
 
@@ -121,6 +126,18 @@ function isPhone(s,t){
   console.log(t);
 }
 
-function isEmail(s,t,k){
- 
+function isEmail(s,t,c){
+  t = '';
+  var n = 0;
+  var c = '@mail.com';
+  for(var i = (s.length - 8); i < s.length; i++){
+    for(var j = 0; j < 8; j++){
+      if(s[i] == c[j]) n++;
+    }
+  }
+  if(n == 8) {
+    t = true;
+  }
+  else t = false;
+  console.log(t);
 }

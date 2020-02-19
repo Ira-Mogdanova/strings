@@ -11,7 +11,7 @@
       <input type="text" id="input" onchange="inputVal = this.value;" value="Some string"><br>
       <input type="text" id="check" onchange="checkVal = this.value;">
       <p style="font-size: 20px;">
-          <input type="text" id="output" readonly onchange="outputVal = this.value">
+          <input type="text" id="output" readonly>
         </p>
     </div>
     <div class="right">
@@ -36,7 +36,7 @@
       <button onclick="isPhone(inputVal,outputVal)">
         Is phone
       </button><br>
-      <button onclick="isEmail(inputVal,outputVal,checkVal)">
+      <button onclick="isEmail(inputVal,outputVal)">
         Is email
       </button><br>
     </div>
