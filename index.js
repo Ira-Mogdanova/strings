@@ -128,16 +128,26 @@ function isPhone(s,t){
 
 function isEmail(s,t,c){
   t = '';
+  k = 0;
   var n = 0;
   var c = '@mail.com';
+  for(var i = 0; i < s.length-8; i++){
+    if((s[i] == ' ') || (s[i] == '#') || (s[i] == '?') 
+    || (s[i] == '$') || (s[i] == '%') || (s[i] == '&')
+    || (s[i] == ',') || (s[i] == '"') || (s[i] == ''))
+      k++;
+  }
   for(var i = (s.length - 8); i < s.length; i++){
     for(var j = 0; j < 8; j++){
       if(s[i] == c[j]) n++;
     }
   }
-  if(n == 8) {
+  if((n == 8) && (k == 0)) {
     t = true;
   }
-  else t = false;
+  else 
+    if((k != 0) && (n == 8)) 
+      alert("Enter correct email : emailemail@mail.com");
+    else t = false;
   console.log(t);
 }
