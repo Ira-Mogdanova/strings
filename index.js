@@ -1,24 +1,19 @@
 var btn = document.querySelector('button');
-var input = document.getElementById("input"); 
-var check = document.getElementById("check");
-var output = document.getElementById("output");
-var inputVal = input.value;
-var outputVal = output.value;
-var checkVal = check.value;
-
+var inputVal = document.getElementById("input").value; 
+var checkVal = document.getElementById("check").value;
+var outputVal = document.getElementById("output");
 
 function reverse(s,t) {
   t = '';
-    for (var i = s.length - 1; i >= 0; i--){
-        t = t += s[i];
-    }
-    console.log(t);
+  for (var i = s.length - 1; i >= 0; i--){
+      t = t += s[i];
+  }
+  return t;
 }
 
 function endWith(s,t,c){
   t = '';
   var n = 0;
-  var d = '';
   if(c != ''){
     for(var i = (s.length - c.length); i < s.length; i++){
       for(var j = 0; j < c.length; j++){
@@ -31,7 +26,7 @@ function endWith(s,t,c){
     else t = false;
   }
   else alert("Enter some end to check it!");
-  console.log(t);
+  return t;
 }
 
 function startWith(s,t,c){
@@ -47,7 +42,7 @@ function startWith(s,t,c){
     else t = false;
   }
   else alert("Enter some start to check it!");
-  console.log(t);
+  return t;
 }
 
 function isCamelCase(s,t){
@@ -65,8 +60,7 @@ function isCamelCase(s,t){
   if((n == 0) && (k >= 2) && (j >= 2)){
     t = true;
   } else t = false;
-
-  console.log(t);
+  return t;
 }
 
 function isSnakeCase(s,t){
@@ -89,8 +83,7 @@ function isSnakeCase(s,t){
   if((n == 0) && (k >= 2) && (j == 0) && (l >= 1)){
     t = true;
   } else t = false;
-
-  console.log(t);
+  return t;
 }
 
 function isNan(s,t){
@@ -107,8 +100,7 @@ function isNan(s,t){
   }
   else 
     t = false;
-
-  console.log(t);
+  return t;
 }
 
 function isPhone(s,t){
@@ -122,8 +114,7 @@ function isPhone(s,t){
   }
   else 
     t = false;
-
-  console.log(t);
+  return t;
 }
 
 function isEmail(s,t,c){
@@ -134,7 +125,12 @@ function isEmail(s,t,c){
   for(var i = 0; i < s.length-8; i++){
     if((s[i] == ' ') || (s[i] == '#') || (s[i] == '?') 
     || (s[i] == '$') || (s[i] == '%') || (s[i] == '&')
-    || (s[i] == ',') || (s[i] == '"') || (s[i] == ''))
+    || (s[i] == ',') || (s[i] == '"') || (s[i] == '-')
+    || (s[i] == '!') || (s[i] == '@') || (s[i] == '_')
+    || (s[i] == ')') || (s[i] == '$') || (s[i] == ':')
+    || (s[i] == ';') || (s[i] == '/') || (s[i] == '\\')
+    || (s[i] == '№') || (s[i] == '^') || (s[i] == '`')
+    || (s[i] == '(') || (s[i] == '+') || (s[i] == '='))
       k++;
   }
   for(var i = (s.length - 8); i < s.length; i++){
@@ -149,5 +145,5 @@ function isEmail(s,t,c){
     if((k != 0) && (n == 8)) 
       alert("Enter correct email : emailemail@mail.com");
     else t = false;
-  console.log(t);
+  return t;
 }

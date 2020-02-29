@@ -9,34 +9,32 @@
   <div>
     <div class="left"> 
       <input type="text" id="input" onchange="inputVal = this.value;" value="Some string"><br>
-      <input type="text" id="check" onchange="checkVal = this.value;">
-      <p style="font-size: 20px;">
-          <input type="text" id="output" readonly>
-        </p>
+      <input type="text" id="check" onchange="checkVal = this.value;" value="ing">
+      <input type="text" id="output" onchange="outputVal = this.value;" value=" ">
     </div>
     <div class="right">
-      <button onclick="reverse(inputVal,outputVal);">
+      <button onclick="outputVal.value = reverse(inputVal, outputVal)">
         Reverse string
       </button><br>
-      <button onclick="endWith(inputVal,outputVal,checkVal)">
+      <button onclick="outputVal.value = endWith(inputVal,outputVal,checkVal)">
         End With
       </button><br>
-      <button onclick="startWith(inputVal,outputVal,checkVal)">
+      <button onclick="outputVal.value = startWith(inputVal,outputVal,checkVal)">
         Start With
       </button><br>
-      <button onclick="isCamelCase(inputVal,outputVal)">
+      <button onclick="outputVal.value = isCamelCase(inputVal,outputVal)">
         Is Camel Case
       </button><br>
-      <button onclick="isSnakeCase(inputVal,outputVal)">
+      <button onclick="outputVal.value = isSnakeCase(inputVal,outputVal)">
         Is Snake Case
       </button><br>
-      <button onclick="isNan(inputVal,outputVal)">
+      <button onclick="outputVal.value = isNan(inputVal,outputVal)">
         Is NaN
       </button><br>
-      <button onclick="isPhone(inputVal,outputVal)">
+      <button onclick="outputVal.value = isPhone(inputVal,outputVal)">
         Is phone
       </button><br>
-      <button onclick="isEmail(inputVal,outputVal)">
+      <button onclick="outputVal.value = isEmail(inputVal,outputVal)">
         Is email
       </button><br>
     </div>
