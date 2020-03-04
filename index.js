@@ -126,24 +126,25 @@ function isEmail(s,t,c){
     if((s[i] == ' ') || (s[i] == '#') || (s[i] == '?') 
     || (s[i] == '$') || (s[i] == '%') || (s[i] == '&')
     || (s[i] == ',') || (s[i] == '"') || (s[i] == '-')
-    || (s[i] == '!') || (s[i] == '@') || (s[i] == '_')
+    || (s[i] == '!') || (s[i] == '~') || (s[i] == '_')
     || (s[i] == ')') || (s[i] == '$') || (s[i] == ':')
     || (s[i] == ';') || (s[i] == '/') || (s[i] == '\\')
     || (s[i] == '№') || (s[i] == '^') || (s[i] == '`')
     || (s[i] == '(') || (s[i] == '+') || (s[i] == '='))
       k++;
   }
-  for(var i = (s.length - 8); i < s.length; i++){
+  for(var i = (s.length - 9); i < s.length; i++){
     for(var j = 0; j < 8; j++){
       if(s[i] == c[j]) n++;
     }
   }
-  if((n == 8) && (k == 0)) {
+  if((n == 9) && (k == 0)) {
     t = true;
   }
   else 
-    if((k != 0) && (n == 8)) 
+    if((k != 0) && (n == 9)) 
       alert("Enter correct email : emailemail@mail.com");
     else t = false;
+  
   return t;
 }
