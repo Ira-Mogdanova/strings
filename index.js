@@ -119,7 +119,7 @@ function isPhone(s,t){
 
 function isEmail(s,t,c){
   t = '';
-  var c = /@mail.com/ig;
+  var c = new RegExp("@mail.com");
   var t = c.exec(s);
   if(t!=null) {
     t = true;
@@ -128,5 +128,8 @@ function isEmail(s,t,c){
     t = false;
     alert("Enter correct email : emailemail@mail.com");
   }
+  console.log(c);
+  console.log(t);
+  console.log(s);
   return t;
 }
